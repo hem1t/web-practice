@@ -1,5 +1,7 @@
 # Assests sources
 
+Inspiration - https://dribbble.com/shots/18253209-Game-Store-Website
+
 ### Covers
 
 1. https://wallhaven.cc/w/d5ypx3
