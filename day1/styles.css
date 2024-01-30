@@ -134,3 +134,18 @@ input[type="checkbox"]:checked::before {
   border-radius: 1123123px;
   font-weight: bold;
 }
+
+#games-list-section {
+  position: absolute;
+  right: 40px;
+  top: 12vh;
+  height: 90vh;
+  width: 70vw;
+}
+
+#games-covers {
+  height: 22vh;
+  width: 70vw;
+  object-fit: cover;
+  border-radius: 20px;
+}
