@@ -1,11 +1,19 @@
 :root {
-  --orangeshade: #ff8b00;
+  --primarycolor: #ff8b98;
+  --background-highlight: #414141;
 }
 
 body,
 html {
   margin: 0px;
   padding: 0px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
 }
 
 body {
@@ -34,7 +42,7 @@ header {
 }
 
 #left-nav > .selected {
-  color: var(--orangeshade);
+  color: var(--primarycolor);
 }
 
 #right-nav {
@@ -49,4 +57,80 @@ header {
   height: 50px;
   border-radius: 23423423px;
   object-fit: cover;
+}
+
+#filter-section {
+  position: absolute;
+  left: 5vw;
+  top: 12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  height: fit-content;
+  width: 200px;
+
+  background-color: var(--background-highlight);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.filter-list > div {
+  margin-left: 14px;
+}
+
+.filter-list > div > label {
+  font-size: 20px;
+}
+
+.filter-checkbox {
+  width: 15px;
+  height: 15px;
+  color: currentColor;
+  border-radius: 2px;
+  display: inline-grid;
+  place-content: center;
+  transform: translateY(-1px);
+}
+
+.filter-checkbox::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 15px 15px var(--primarycolor);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+#filter-price-range > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 190px;
+  gap: 5px;
+}
+
+#filter-price-range input {
+  height: 30px;
+  width: 30px;
+  flex: 1;
+  border: none;
+  border-radius: 5px;
+  background-color: #212121;
+}
+
+#filter-apply-button {
+  background-color: var(--primarycolor);
+  color: black;
+  padding: 15px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-radius: 1123123px;
+  font-weight: bold;
 }
