@@ -1,17 +1,16 @@
 :root {
   --primarycolor: #ff8b98;
-  --background-highlight: #414141;
+  --background-highlight: #212121;
 }
 
 body,
 html {
   margin: 0px;
   padding: 0px;
-  background-color: black;
+  background-color: #111;
   color: white;
   height: 100vh;
   width: 100vw;
-  position: relative;
 }
 
 input[type="checkbox"] {
@@ -22,29 +21,32 @@ input[type="checkbox"] {
 }
 
 header {
-  margin: 25px;
-  margin-left: 45px;
-  margin-right: 45px;
+  padding: 15px 0px;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  background-color: black;
 }
 
 #left-nav {
   font-size: 20px;
   width: fit-content;
+  margin-left: 45px;
 }
 
 .nav-button {
-  margin-right: 10px;
+  padding-right: 10px;
   cursor: default;
 }
 
 #left-nav > .selected {
-    color: var(--primarycolor);
+  color: var(--primarycolor);
 }
 
 #right-nav {
+  padding-right: 45px;
   display: inline-flex;
   align-items: center;
   gap: 17px;
@@ -59,7 +61,7 @@ header {
 }
 
 #filter-section {
-  position: absolute;
+  position: fixed;
   left: 6vw;
   top: 12vh;
   display: flex;
@@ -136,7 +138,7 @@ input[type="checkbox"]:checked::before {
 
 #games-list-section {
   position: absolute;
-  right:5vw;
+  right: 5vw;
   top: 12vh;
   width: 70vw;
   display: flex;
@@ -146,8 +148,8 @@ input[type="checkbox"]:checked::before {
 
 /* why this thing doesn't have any width and height */
 #games-covers {
-    height: fit-content;
-    height: 28vh;
+  height: fit-content;
+  height: 28vh;
 }
 
 .game-cover {
@@ -161,18 +163,70 @@ input[type="checkbox"]:checked::before {
 }
 
 .hidden-cover {
-    opacity: 0%;
+  opacity: 0%;
 }
 
 #games-grid-list {
-    margin: 0px 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  margin: 0px 30px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .game-item {
-    height: fit-content;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 14px;
+  background-color: var(--background-highlight);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 6px;
 }
 
 .game-thumb {
+  width: 250px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.game-name,
+.platform-name,
+.game-price {
+  padding-left: 8px;
+}
+
+.game-name {
+  margin-top: 6px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.platform-name {
+  font-weight: 600;
+  color: #aaa;
+}
+
+.game-price {
+  margin-top: 14px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-tag {
+  font-size: 23px;
+}
+
+.add-cart-button {
+  border-radius: 12312312px;
+  background-color: var(--primarycolor);
+  color: black;
+  padding: 9px;
+  font-size: 20px;
+  font-weight: 300;
 }
