@@ -27,7 +27,7 @@ header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  background-color: black;
+  background-color: var(--background-highlight);
 }
 
 #left-nav {
@@ -187,10 +187,18 @@ input[type="checkbox"]:checked::before {
 }
 
 .game-thumb {
-  width: 250px;
+  width: 350px;
   height: 320px;
   object-fit: cover;
   border-radius: 14px;
+}
+
+.thumb-1 {
+  object-position: 0px -5px;
+}
+
+.thumb-2 {
+  object-position: 0px -5px;
 }
 
 .game-name,
