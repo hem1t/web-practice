@@ -11,6 +11,7 @@ for (var navButton of nav_buttons) {
 
 var covers = document.getElementsByClassName("game-cover");
 var current_cover = 0;
+var last_cover = covers.length - 1;
 
 function changeCover(hide_i, show_i) {
     covers[hide_i].classList.add('hidden-cover');
@@ -19,7 +20,7 @@ function changeCover(hide_i, show_i) {
 
 setInterval(() => {
     var [h, s] = [current_cover, current_cover + 1];
-    if (current_cover == 4) { current_cover = 0; s = 0; }
+    if (current_cover == last_cover) { current_cover = 0; s = 0; }
     changeCover(h, s);
     current_cover += 1;
     // Why using ++ operator binds variables;
