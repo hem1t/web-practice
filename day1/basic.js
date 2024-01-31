@@ -8,3 +8,19 @@ for (var navButton of nav_buttons) {
     selected_nav = this;
   });
 }
+
+var covers = document.getElementsByClassName("game-cover");
+var current_cover = 0;
+
+function changeCover(hide_i, show_i) {
+    covers[hide_i].classList.add('hidden-cover');
+    covers[show_i].classList.remove('hidden-cover');
+}
+
+setInterval(() => {
+    var [h, s] = [current_cover, current_cover + 1];
+    if (current_cover == 4) { current_cover = 0; s = 0; }
+    changeCover(h, s);
+    current_cover += 1;
+    // Why using ++ operator binds variables;
+}, 5000);

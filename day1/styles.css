@@ -40,7 +40,7 @@ header {
 }
 
 #left-nav > .selected {
-  color: var(--primarycolor);
+    color: var(--primarycolor);
 }
 
 #right-nav {
@@ -59,7 +59,7 @@ header {
 
 #filter-section {
   position: absolute;
-  left: 4vw;
+  left: 6vw;
   top: 12vh;
   display: flex;
   flex-direction: column;
@@ -135,14 +135,21 @@ input[type="checkbox"]:checked::before {
 
 #games-list-section {
   position: absolute;
-  right: 3vw;
+  right:5vw;
   top: 12vh;
   width: 70vw;
 }
 
-#games-covers {
+.game-cover {
   height: 28vh;
   width: 70vw;
   object-fit: cover;
+  position: absolute;
   border-radius: 20px;
+  opacity: 100%;
+  transition: 250ms;
+}
+
+.hidden-cover {
+    opacity: 0%;
 }
